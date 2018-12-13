@@ -40,7 +40,7 @@
                 <Columns>
         <asp:TemplateField>
             <ItemTemplate >
-               <a href="#" style="display:flex; justify-content:center;" runat="server" id="anchor1" onserverclick="anchor1_ServerClick"><%# Eval("MovieName") %>
+               <a href="#" style="display:flex; justify-content:center;" runat="server" id="anchor1" onserverclick="anchor1_ServerClick"><%# DataBinder.Eval(Container.DataItem,"MovieName") %>
                 </a>
             </ItemTemplate>
         </asp:TemplateField>

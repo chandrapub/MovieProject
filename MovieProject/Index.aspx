@@ -55,7 +55,7 @@
             <ItemTemplate>
                 <tr class="col-sm-2" style="display:inline-block;">                                   
                     <div class="wrapper">
-                    <td class="poster" style="display:flex; justify-content:center;"><a class="caption" href="#" runat="server" id="anchor2" onserverclick="anchor2_ServerClick"><%# Eval("MovieName") %></a><img src="<%# Eval("PosterUrl") %>" alt="Poster-url" height="200vh" /></td>
+                    <td class="poster" style="display:flex; justify-content:center;"><a class="caption" href="#" runat="server" id="anchor2" onserverclick="anchor2_ServerClick"><%# DataBinder.Eval(Container.DataItem,"MovieName") %></a><img src="<%# DataBinder.Eval(Container.DataItem,"PosterUrl") %>" alt="Poster-url" height="200vh" /></td>
                         </div>
                 </tr>
             </ItemTemplate>
@@ -63,9 +63,10 @@
                 </table>
             </FooterTemplate>
         </asp:Repeater>
-            <asp:SqlDataSource ID="SqlDataSourceAction" runat="server" ConnectionString="<%$ ConnectionStrings:MovieDBConnectionStringNoDuplicate %>" SelectCommand="Select top 6 MovieName, PosterUrl from Movies WHERE FilmCategoryId = 1 order by counter desc"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSourceAction" runat="server" ConnectionString="<%$ ConnectionStrings:MovieDBConnectionString %>" SelectCommand="Select top 6 MovieName, PosterUrl from Movies WHERE FilmCategoryId = 1 order by counter desc"></asp:SqlDataSource>
             <br />
         </div>
+
 
                       <div class="container repeaterDiv">
                            <h3>Most popular Animation Movies</h3>
@@ -77,7 +78,7 @@
             <ItemTemplate>
                 <tr class="col-sm-2" style="display:inline-block;">                                   
                     <div class="wrapper">
-                   <td class="poster" style="display:flex; justify-content:center;"><a class="caption" href="#" runat="server" id="anchor2" onserverclick="anchor2_ServerClick"><%# Eval("MovieName") %></a><img src="<%# Eval("PosterUrl") %>" alt="Poster-url" height="200vh" /></td>
+                   <td class="poster" style="display:flex; justify-content:center;"><a class="caption" href="#" runat="server" id="anchor2" onserverclick="anchor2_ServerClick"><%# DataBinder.Eval(Container.DataItem,"MovieName") %></a><img src="<%# DataBinder.Eval(Container.DataItem,"PosterUrl") %>" alt="Poster-url" height="200vh" /></td>
                         </div>
                 </tr>
             </ItemTemplate>
@@ -85,7 +86,7 @@
                 </table>
             </FooterTemplate>
         </asp:Repeater>
-            <asp:SqlDataSource ID="SqlDataSourceAnimation" runat="server" ConnectionString="<%$ ConnectionStrings:MovieDBConnectionStringNoDuplicate %>" SelectCommand="Select top 6 MovieName, PosterUrl from Movies WHERE FilmCategoryId = 2 order by counter desc"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSourceAnimation" runat="server" ConnectionString="<%$ ConnectionStrings:MovieDBConnectionString %>" SelectCommand="Select top 6 MovieName, PosterUrl from Movies WHERE FilmCategoryId = 2 order by counter desc"></asp:SqlDataSource>
             <br />
         </div>
 
@@ -99,7 +100,7 @@
             <ItemTemplate>
                 <tr class="col-sm-2" style="display:inline-block;">                                   
                     <div class="wrapper">
-                    <td class="poster" style="display:flex; justify-content:center;"><a class="caption" href="#" runat="server" id="anchor2" onserverclick="anchor2_ServerClick"><%# Eval("MovieName") %></a><img src="<%# Eval("PosterUrl") %>" alt="Poster-url" height="200vh" /></td>
+                    <td class="poster" style="display:flex; justify-content:center;"><a class="caption" href="#" runat="server" id="anchor2" onserverclick="anchor2_ServerClick"><%# DataBinder.Eval(Container.DataItem,"MovieName") %></a><img src="<%# DataBinder.Eval(Container.DataItem,"PosterUrl") %>" alt="Poster-url" height="200vh" /></td>
                         </div>
                 </tr>
             </ItemTemplate>
@@ -107,7 +108,7 @@
                 </table>
             </FooterTemplate>
         </asp:Repeater>
-            <asp:SqlDataSource ID="SqlDataSourceThriller" runat="server" ConnectionString="<%$ ConnectionStrings:MovieDBConnectionStringNoDuplicate %>" SelectCommand="Select top 6 MovieName, PosterUrl from Movies WHERE FilmCategoryId = 3 order by counter desc"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSourceThriller" runat="server" ConnectionString="<%$ ConnectionStrings:MovieDBConnectionString %>" SelectCommand="Select top 6 MovieName, PosterUrl from Movies WHERE FilmCategoryId = 3 order by counter desc"></asp:SqlDataSource>
             <br />
         </div>
                       <div class="container repeaterDiv">
@@ -120,7 +121,7 @@
             <ItemTemplate>
                 <tr class="col-sm-2" style="display:inline-block;">                                   
                     <div class="wrapper">
-                   <td class="poster" style="display:flex; justify-content:center;"><a class="caption" href="#" runat="server" id="anchor2" onserverclick="anchor2_ServerClick"><%# Eval("MovieName") %></a><img src="<%# Eval("PosterUrl") %>" alt="Poster-url" height="200vh" /></td>
+                   <td class="poster" style="display:flex; justify-content:center;"><a class="caption" href="#" runat="server" id="anchor2" onserverclick="anchor2_ServerClick"><%# DataBinder.Eval(Container.DataItem,"MovieName") %></a><img src="<%# DataBinder.Eval(Container.DataItem,"PosterUrl") %>" alt="Poster-url" height="200vh" /></td>
                         </div>
                 </tr>
             </ItemTemplate>
@@ -128,7 +129,7 @@
                 </table>
             </FooterTemplate>
         </asp:Repeater>
-            <asp:SqlDataSource ID="SqlDataSourceScience" runat="server" ConnectionString="<%$ ConnectionStrings:MovieDBConnectionStringNoDuplicate %>" SelectCommand="Select top 6 MovieName, PosterUrl from Movies WHERE FilmCategoryId = 4 order by counter desc"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSourceScience" runat="server" ConnectionString="<%$ ConnectionStrings:MovieDBConnectionString %>" SelectCommand="Select top 6 MovieName, PosterUrl from Movies WHERE FilmCategoryId = 4 order by counter desc"></asp:SqlDataSource>
             <br />
         </div>
 

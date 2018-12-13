@@ -11,8 +11,9 @@ namespace MovieProject
     {
         
         public static SqlConnection CreateConnection()
-        {          
-            SqlConnection conn = new SqlConnection(@"data source = LAPTOP-9C071575; integrated security = true; database = MovieDB");       
+        {
+            //SqlConnection conn = new SqlConnection(@"data source = LAPTOP-9C071575; integrated security = true; database = MovieDB");       
+            SqlConnection conn = new SqlConnection(@"data source = DESKTOP-F8MV33J\SQLEXPRESS; integrated security = true; database = MovieDB");
             return conn;
         }
         public static string RequestAPI(string search)
